@@ -1,4 +1,4 @@
-package test.performance.backend;
+package test.performance.backend.member;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
