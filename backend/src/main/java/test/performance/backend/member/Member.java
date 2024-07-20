@@ -4,7 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.Builder;
 
 @Entity
 public class Member {
@@ -15,12 +14,18 @@ public class Member {
 
     private String nickname;
 
-    @Builder
-    private Member(Long id, String nickname) {
-        this.id = id;
+    public Member(String nickname) {
         this.nickname = nickname;
     }
 
     protected Member() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getNickname() {
+        return nickname;
     }
 }
