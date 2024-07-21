@@ -23,9 +23,7 @@ public class LikeHistory {
     @ManyToOne(fetch = FetchType.LAZY)
     private Post post;
 
-    @Builder
-    private LikeHistory(Long id, Member member, Post post) {
-        this.id = id;
+    public LikeHistory(Member member, Post post) {
         this.member = member;
         this.post = post;
     }
