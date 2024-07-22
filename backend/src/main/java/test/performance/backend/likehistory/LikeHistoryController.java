@@ -18,9 +18,9 @@ public class LikeHistoryController {
         this.likeHistoryService = likeHistoryService;
     }
 
-    @PostMapping("/{likeHistoryId}")
-    public ResponseEntity<Void> like(Long memberId, @PathVariable Long likeHistoryId) {
-        likeHistoryService.done(memberId, likeHistoryId);
+    @PostMapping("/{postId}")
+    public ResponseEntity<Void> like(Long memberId, @PathVariable Long postId) {
+        likeHistoryService.done(memberId, postId);
         return ResponseEntity.ok().build();
     }
 }
