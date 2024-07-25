@@ -31,4 +31,12 @@ public class LikeHistoryService {
         Post post = postRepository.findById(postId).orElseThrow(PostNotFountException::new);
         likeHistoryRepository.save(new LikeHistory(member, post));
     }
+
+    @Transactional
+    public void doneWithWrite(Long memberId, Long postId) {
+        Member member = memberRepository.findById(memberId).orElseThrow(MemberNotFoundException::new);
+        Post post = postRepository.findById(postId).orElseThrow(PostNotFountException::new);
+        likeHistoryRepository.save(new LikeHistory(member, post));
+        post.like();
+    }
 }

@@ -23,4 +23,10 @@ public class LikeHistoryController {
         likeHistoryService.done(memberId, postId);
         return ResponseEntity.ok().build();
     }
+
+    @PostMapping("/{postId}/write")
+    public ResponseEntity<Void> likeWithWrite(Long memberId, @PathVariable Long postId) {
+        likeHistoryService.doneWithWrite(memberId, postId);
+        return ResponseEntity.ok().build();
+    }
 }

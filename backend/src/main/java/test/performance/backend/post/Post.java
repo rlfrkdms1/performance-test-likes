@@ -37,4 +37,8 @@ public class Post {
     protected Post() {
 
     }
+
+    public void like() {
+        likes++;
+    }
 }
