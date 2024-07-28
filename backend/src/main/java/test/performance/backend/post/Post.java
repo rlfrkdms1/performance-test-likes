@@ -41,4 +41,24 @@ public class Post {
     public void like() {
         likes++;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public long getLikes() {
+        return likes;
+    }
+
+    public Member getMember() {
+        return member;
+    }
 }
